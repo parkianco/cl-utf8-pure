@@ -12,8 +12,10 @@
   :serial t
   :components ((:file "package")
                (:module "src"
-                :serial t
-                :components ((:file "utf8")))))
+                :components ((:file "package")
+                             (:file "conditions" :depends-on ("package"))
+                             (:file "types" :depends-on ("package"))
+                             (:file "cl-utf8-pure" :depends-on ("package" "conditions" "types")))))))
 
 (asdf:defsystem #:cl-utf8-pure/test
   :description "Tests for cl-utf8-pure"

@@ -7,7 +7,9 @@
 (defpackage #:cl-utf8-pure
   (:use #:cl)
   (:export
-   ;; Encoding/Decoding
+   #:with-utf8-pure-timing
+   #:utf8-pure-batch-process
+   #:utf8-pure-health-check;; Encoding/Decoding
    #:string-to-utf8-bytes
    #:utf8-bytes-to-string
    ;; Length calculations
