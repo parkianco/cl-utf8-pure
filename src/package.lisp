@@ -7,7 +7,11 @@
 (defpackage #:cl-utf8-pure
   (:use #:cl)
   (:export
-   #:with-utf8-pure-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-utf8-pure-timing
    #:utf8-pure-batch-process
    #:utf8-pure-health-check;; Encoding/Decoding
    #:string-to-utf8-bytes
